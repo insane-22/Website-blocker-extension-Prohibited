@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    background: #333;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+nav .menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav .logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+button{
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition:background 0.5s, margin-left 0.5s;
+}
+
+button span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.text-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+
+.text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.text-container button{
+    text-decoration: none;
+    text-align: center;
+    text-overflow: unset;
+    background: #00986f;
+    padding: 24px 80px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span{
+    width: 80%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+}
+
+label{
+    position: relative;
+    top: -500px;
+    left: 220px;
+    width: 150px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;
+}
+
+label input{
+    appearance: none;
+}
+
+label span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label input:checked ~ span{
+    left: 75px;
+}
+
+label span {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+label input:checked ~ span {
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+
+.bulb{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 348px;
+    height: 408px;
+    pointer-events: none;
+    background: url(images/bulb_off.jpg);
+    transition: 0.5s;
+}
+
+label input:checked ~ .bulb{
+    background: url(images/bulb_on.jpg);
+}
